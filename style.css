@@ -1,0 +1,171 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    background: linear-gradient(hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+
+
+/*------------MAIN-------------*/
+/*----logo----*/
+.logo{
+ margin: 4vh 8vw;
+ width: clamp(120px, 3vw, 150px);
+}
+
+
+/*----section----*/
+
+
+.hero-mobile img{
+    width: 100%;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 8vh 8vw;
+}
+
+h1{
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.3em;
+}
+
+h1 span{
+    font-size: clamp(1.8em,3vw, 2.1em);
+    font-weight: 300;
+    color: hsl(0, 36%, 70%);
+}
+
+h1 em{
+    font-size: clamp(2em,3vw, 2.5em);
+    font-weight: 400;
+    font-style: normal;
+    color: hsl(0, 6%, 24%);
+}
+
+
+section p{
+font-size: clamp(1em,2.3vw, 1.5em);
+   text-align: center; 
+   color: hsl(0, 36%, 70%);
+   line-height: 1.6em;
+   margin: 2vh 0;
+}
+
+.formulaire{
+    width: 100%;
+}
+
+form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+form input[type="text"]{
+    background-color: #11ffee00;
+    padding: 15px;
+    width: 100%;
+    border: 0.5px solid hsl(0, 6%, 24%);
+    border-radius: 25px;
+    opacity: 0.4;
+    font-size: clamp(1em, 2vw, 1.2em);
+    margin-top: 4vh;
+}
+
+
+
+form input[type="text"].redBorder{
+    border: 2px solid hsl(0, 93%, 68%) !important;
+}
+
+
+form button{
+    background: linear-gradient(to right, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    border: none;
+    padding: 15px;
+    width: 20%;
+    z-index: 2;
+    position: relative;
+    right: 10%;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 4vh;
+}
+
+form button:hover{
+    background: linear-gradient(to right, hsl(0, 87%, 91%), hsl(0, 92%, 85%));
+    box-shadow: 10px 10px 10px hsl(0, 63%, 88%);
+}
+
+.form-error-img {
+    display: none;
+    width: 40px;
+    margin-top: 4vh;
+    position: relative;
+    right: 20%;
+}
+
+.form-error-img.active{
+    display: block;
+}
+
+
+.formulaire p{
+    display: none;
+}
+
+.formulaire p.active{
+    display: block;
+    font-size: 0.8em;
+    color: hsl(0, 93%, 68%);
+    text-align: left;
+    margin-left: 20px;
+}
+
+
+/*------------FOOTER-------------*/
+
+footer{
+    margin: 0;
+}
+
+.hero-desktop img{
+    display: none;
+}
+
+
+/*------------RESPONSIVE-------------*/
+@media only screen and (min-width: 800px) {
+    body{
+        display: flex;
+        background: url(./images/bg-pattern-desktop.svg) no-repeat;
+        background-size: cover;
+       } 
+
+
+    main{
+        width: 60%;
+    }
+
+    .hero-mobile img{
+        display: none;
+    }
+
+
+    footer{
+        width: 40%;
+    }
+
+    .hero-desktop img{
+        display: block;
+    }
+   
+}
