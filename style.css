@@ -65,11 +65,16 @@ font-size: clamp(1em,2.3vw, 1.5em);
 
 form{
     width: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
     align-items: center;
+    margin-top: 4vh;
 }
 
 form input[type="text"]{
+    grid-column-start: 1;
+    grid-row-start: 1;
     background-color: #11ffee00;
     padding: 15px;
     width: 100%;
@@ -77,7 +82,7 @@ form input[type="text"]{
     border-radius: 25px;
     opacity: 0.4;
     font-size: clamp(1em, 2vw, 1.2em);
-    margin-top: 4vh;
+    
 }
 
 
@@ -88,16 +93,16 @@ form input[type="text"].redBorder{
 
 
 form button{
+    grid-column-start: 1;
+    grid-row-start: 1;
+    justify-self: flex-end;
     background: linear-gradient(to right, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
     border: none;
     padding: 15px;
     width: 20%;
     z-index: 2;
-    position: relative;
-    right: 10%;
     border-radius: 25px;
     cursor: pointer;
-    margin-top: 4vh;
 }
 
 form button:hover{
@@ -107,10 +112,10 @@ form button:hover{
 
 .form-error-img {
     display: none;
-    width: 40px;
-    margin-top: 4vh;
-    position: relative;
-    right: 20%;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    width: 30px;
+    justify-self: center;
 }
 
 .form-error-img.active{
@@ -157,6 +162,14 @@ footer{
 
     .hero-mobile img{
         display: none;
+    }
+
+    section{
+        align-items: flex-start;
+    }
+
+    h1, section p {
+        text-align: left;
     }
 
 
